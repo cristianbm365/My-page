@@ -1,0 +1,45 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+}
+.text-justify {
+    text-align: justify;
+}
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior según tus necesidades */
+    right: 10px; /* Ajusta la distancia desde la derecha según tus necesidades */
+    z-index: 1000; /* Ajusta el valor de z-index según sea necesario */
+}
+.navegacion-principal {
+    display: flex;
+    flex-direction: column; /*Para que se ponga de arriba hacia abajo en un celular*/
+}
+@media (min-width: 768px)  { /*SE agrega para que la página se adapte a diferentes dispositivos*/
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem;
+}
+.navegacion-principal a:hover { /*Con esto hice que cuando me pare en la barra de navegación, cambie de color */
+    background-color: gray;
+    color: var(--oscuro);/*Color de la letra que va a llevar cuando ponga el clic ahí*/
+}
+.contenedor{
+    max-width: 70rem;
+    margin: 0 auto;
+}
